@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function(){
+            var b = window.location.href.split('=')[1];
+            $.ajax({
+            url:"http://localhost:3000/item/detail",
+                    type:"POST",
+                    data:{
+                id:b
+            },
+            success:function(e){
+                for(var i in e){
+                    $('body').append(e[i].detail)
+                }
+            }
+        })
+        })
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>
