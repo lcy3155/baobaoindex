@@ -10,7 +10,7 @@
                 url:"http://localhost:3000/item/list",
                 type:"GET",
                 success:function(e){
-                    for(var i=0;i< e.length;i++){
+                    for(var i in e){
                         $("body").append("<a href='index2.html?id="+e[i].id+"'>"+e[i].name+"</a><br>")
                     }
                 }
